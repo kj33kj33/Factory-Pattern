@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("How many wheels will your ride have?");
+
+            var answer = int.Parse(Console.ReadLine());
+
+            IVehicle newVehicle = VehicleFactory.BuildVehicle(answer);
+
+            newVehicle.Drive();
         }
     }
 }
